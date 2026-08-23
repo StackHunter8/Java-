@@ -1,0 +1,5 @@
+What is JAVA?
+  -- Java is nothoing but a programming language that was invented by James Gosling.
+  --It is a pure Object Oriented programming language.
+  --Also it is a platform independent langugae as the java code gets converted first into the byte code and then into the machine code.
+  --If any machine is having this converted byte code then even though the original source code is not present inside the machine one can easily access the code by converting the byte code into the machine code.
