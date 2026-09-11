@@ -378,7 +378,7 @@ class Main{
 // You've now practiced:
 
 // ✅ Widening conversion
-// ✅ Narrowing conversion
+// ✅ Narrowing conversion      
 // ✅ Explicit casting
 // ✅ char ↔ int
 // ✅ Integer division
