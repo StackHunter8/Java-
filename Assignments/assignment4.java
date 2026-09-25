@@ -853,22 +853,314 @@
 //     *
 
 
-class Main{
-    public static void main(String args[]){
-        int n = 5;
-        int space = 0;
-        int stars = 9;
-        for(int i = 0;i<n;i++){
-            for(int k = 0;k<space;k++){
-                System.out.print(" ");
-            }
-            for(int j = stars;j>0;j--){
-                System.out.print("*");
+// class Main{
+//     public static void main(String args[]){
+//         int n = 5;
+//         int space = 0;
+//         int stars = 9;
+//         for(int i = 0;i<n;i++){
+//             for(int k = 0;k<space;k++){
+//                 System.out.print(" ");
+//             }
+//             for(int j = stars;j>0;j--){
+//                 System.out.print("*");
 
+//             }
+//             stars-=2;
+//             space++;
+//             System.out.println();
+//         }
+//     }
+// }
+
+// Q14. Hollow square
+
+// For n = 5:
+
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+
+// This one requires you to think about:
+
+// first row
+// last row
+// first column
+// last column
+
+// class Main{
+//     public static void main(String args[]){
+//         int n = 5;
+//         for(int i = 1;i<=n;i++){
+
+//             if(i == 1 || i==n){
+
+                
+//               for(int j = 1;j<=n;j++){
+//                 System.out.print("*");
+//               }
+//             }else{
+//                 for(int j = 1;j<=n;j++){
+//                     if(j==1 || j==n){
+//                         System.out.print("*");
+//                     }else{
+//                         System.out.print(" ");
+//                     }
+//                 }
+//             }
+         
+//           System.out.println();
+//         }
+//     }
+// }
+
+// Q15. Hollow triangle
+
+// For n = 5:
+
+// *
+// **
+// * *
+// *  *
+// *****
+
+// class Main{
+//     public static void main(String [] args){
+//         int n = 5;
+//         for(int i = 1;i<=n;i++){
+
+//             if(i==n){
+
+//                 for(int j=1;j<=n;j++){
+//                     System.out.print("*");
+
+//                 }
+//             }
+//             else{
+
+
+//             for(int j = 1;j<=i;j++){
+//                 if(j==1 || j==i){
+//                     System.out.print("*");
+//                 }else{
+//                     System.out.print(" ");
+//                 }
+//             }
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// 🧠 Challenge Problems
+
+// Q16. Diamond
+
+// For n = 5:
+
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+    
+// class Main{
+//     public static void main(String [] args){
+//         int n = 5;
+//         int space = n-1;
+//         int stars= 0;
+        
+
+//         for(int i=0; i<n;i++){
+ 
+//             for(int j = space;j>0;j--){
+//             System.out.print(" ");
+
+//             }
+//             space--;
+//             for(int k = 0;k< 2*i+1;k++){
+//                 System.out.print("*");
+//                 stars = k;
+//             }
+//          System.out.println();
+//         }
+//         // System.out.println(space);
+//         space = 0;
+//         for(int l = 0;l<n-1;l++){
+//             for(int m = 0;m<=space;m++){
+//                 System.out.print(" ");
+//             }
+//             for(int p = stars;p>1;p--){
+//                 System.out.print("*");
+//             }
+//             stars-=2;
+//             space++;
+//             System.out.println();
+//         }
+
+//     }
+// }    
+
+// Q17. Number Pyramid
+
+// For n = 5, print:
+
+//     1
+//    123
+//   12345
+//  1234567
+
+//  class Main{
+//     public static void main(String [] args){
+//         int n = 5;
+//         int num = 1;
+//         int space = n-1;
+
+//         for(int i = 0;i<n;i++){
+//             for(int j = space;j>0;j--){
+//                 System.out.print(" ");
+
+//             }
+//             space --;
+//             for(int k = 0;k<2*i+1;k++){
+//                 System.out.print(num);
+//                 num++;
+//             }
+//             num = 1;
+//             System.out.println();
+
+//         }
+//     }
+//  }
+
+// Q18. Palindrome Number Pyramid
+
+// For n = 5, print:
+
+//     1
+//    121
+//   12321
+//  1234321
+// 123454321
+
+// class Main{
+//     public static void main(String []args){
+//         int n = 5;
+//         int spaces= n-1;
+//         int num = 1;
+       
+//         for(int i = 0;i<n;i++){
+//             for(int j = spaces;j>0;j--){
+//                 System.out.print(" ");
+
+//             }
+//             spaces--;
+
+           
+//             for(int k = num;k<=i+1;k++){
+//                    System.out.print(k);
+//                }
+
+//             for(int l = i;l>=1;l--){
+//                 System.out.print(l);
+//                }
+                
+//           System.out.println();
+//             }
+
+       
+//     }
+// }
+
+// Q19. Floyd's Triangle
+
+// Now let's try a famous DSA/basic-pattern problem.
+
+// For n = 5, print:
+
+// 1
+// 23
+// 456
+// 78910
+// 1112131415
+
+// class Main{
+//     public static void main(String []args){
+//         int num = 1;
+//         int n = 5;
+
+//         for(int i = 0;i<n;i++){
+//             for(int j = 0;j<=i;j++){
+//                 System.out.print(num);
+//                 num ++;
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+// Q20 — Final Pattern Challenge
+
+// You've reached the last question of this 20-question pattern set. 🏆
+
+// For n = 5, print:
+
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 4444
+// 333
+// 22
+// 1
+
+class Main{
+    public static void main(String []args){
+        int n = 5;
+        int num = 1;
+        for(int i = 0;i<n;i++){
+            for(int j = 0;j<=i;j++){
+                System.out.print(num);
             }
-            stars-=2;
-            space++;
+            num++;
+            System.out.println();
+        }
+        num --;
+        for(int l = 0;l<n-1;l++){
+            for(int k = 0;k<num-1;k++){
+                System.out.print(num-1);
+            }
+            num--;
             System.out.println();
         }
     }
 }
+
+
+TRICKS FOR PATTERN PROBLEMS.
+Your pattern-solving checklist from now on
+
+When you see a new pattern, identify these four things:
+
+1. Number of rows
+2. Number of spaces
+3. Number of elements
+4. What value is being printed
+
+Then determine whether each one is:
+
+↑ increasing
+↓ decreasing
+↔ constant
+🔄 resetting
+➡️ continuing
+
+That will make unfamiliar patterns much easier to solve.
